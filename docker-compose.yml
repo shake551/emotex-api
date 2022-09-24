@@ -19,7 +19,7 @@ services:
       - --character-set-server=utf8mb4
       - --collation-server=utf8mb4_bin
     volumes:
-      - ./schema:/docker-entrypoint-initdb.d
+      - ./tools/mysql/initdb.d:/docker-entrypoint-initdb.d
     environment:
       MYSQL_ROOT_PASSWORD: spajam
       MYSQL_USER: spajam
